@@ -39,7 +39,35 @@ Se adjunta el archivo del dataset y su diccionario de datos (PDF) dentro del rep
 ---
 
 ## Conclusiones
-*(Completar al finalizar el análisis.)*
+**A. Comprensión del negocio y los datos:**<br>
+
+El análisis exploratorio permitió identificar patrones importantes en el comportamiento de los clientes, destacando que variables como edad, ingresos, estado civil, ocupación y cantidad de vehículos muestran relación con la compra de bicicletas.<br>
+
+Se evidenció que los compradores tienden a presentar mayores ingresos y que ciertos perfiles demográficos concentran un mayor interés en la compra.<br>
+
+**B. Preparación de los datos:**<br>
+
+Se ejecutó un proceso sólido de limpieza, imputación, tratamiento de outliers mediante winsorización, codificación de variables categóricas y normalización.<br>
+
+El dataset final quedó listo para ser utilizado en modelos de Machine Learning sin pérdida significativa de información ni sesgo introducido por valores atípicos o faltantes.<br>
+
+**C. Modelado:**<br>
+
+Se evaluaron tres tipos de modelos representando los tres paradigmas solicitados:<br>
+- Regresión Logística (inductivo)<br>
+- Árbol de Decisión (divide y vencerás)<br>
+- Red Neuronal MLP (bioinspirado).<br>
+
+Tras comparar los resultados, el modelo seleccionado fue la Regresión Logística, al mostrar el mejor desempeño en la métrica principal (ROC-AUC = 0.6958) y ofrecer la interpretabilidad necesaria para justificar decisiones de negocio.<br>
+
+La validación cruzada evidenció buen comportamiento general y ausencia significativa de sobreajuste.<br>
+
+**D. Scoring comercial:**<br>
+
+Se generó la variable score_buy, que permite priorizar a los clientes según su probabilidad estimada de compra.<br>
+
+El ranking permitió construir el archivo top50_prospects.csv, que ofrece a Peru_bike una herramienta directa para dirigir campañas personalizadas, focalizar recursos de marketing y mejorar el proceso de conversión.<br>
+
 
 ---
 
